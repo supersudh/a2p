@@ -1,0 +1,46 @@
+<h1>
+  {{title}}
+</h1>
+<div *ngIf="name">
+  <app-input-test [realName]="name" [realName2]="nickName"></app-input-test>
+</div>
+
+<input type="text" [(ngModel)]="name" />
+<br>
+<input type="text" [(ngModel)]="nickName" />
+
+<app-event-emitter (clickable)="clickstats($event)">
+  inside the directive...I get this sit.
+</app-event-emitter>
+
+<div>
+  <p [class.senseihub] = "userObj.length">Interface test container</p>
+  <div *ngFor="let user of userObj ; let i = index">
+      <p>User #{{i+1}}</p>
+      <p>Name : {{user.name}}</p>
+      <p>Age : {{user.age}}</p>
+      <p>Place : {{user.place}}</p>
+      <br>
+  </div>
+  
+  <hr>
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="textName" />
+  <br>
+  <label>Age:</label>
+  <input type="number" [(ngModel)]="textAge" />
+  <br>
+  <label>Place:</label>
+  <input type="text" [(ngModel)]="textPlace" />
+  <br>
+  <br>
+  <button (click)="insertData()">Insert!</button>
+</div>
+
+<h2>Template # stuff Test...</h2>
+<div #data>
+  <input type="text" [(ngModel)]="data.name" />
+  {{data.name}}
+  
+  
+</div>
