@@ -16,9 +16,17 @@ export class AppComponent {
   textName:string = "";
   textAge:number = null;
   textPlace:string = "";
-  constructor(logger:LogService) {
-    logger.logIt("hey!!! i work bro");
-  }
+
+  dynamicValue: boolean = false;
+
+  // constructor(
+  //   logger:LogService) {
+  //   // logger.logIt("hey!!! i work bro");
+  //   locService.set("queryParams",{name:'sudharsan'});
+  //   setTimeout(() => {
+  //     console.log(locService.get("queryParams"));
+  //   },1000);
+  // }
 
   clickstats(evt)
   {

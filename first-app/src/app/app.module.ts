@@ -1,3 +1,6 @@
+import { LocComponent } from './location-test/location.component';
+import { routing } from './app.routing';
+import { LocService } from './location-test/location.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,12 +17,14 @@ import { LogService } from './log.service';
     AppComponent,
     InputTestComponent,
     EventEmitterComponent,
-    EventHandlerDirectiveDirective
+    EventHandlerDirectiveDirective,
+    LocComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [LogService],
   bootstrap: [AppComponent]

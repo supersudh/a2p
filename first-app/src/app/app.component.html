@@ -1,4 +1,4 @@
-<h1>
+<!--<h1>
   {{title}}
 </h1>
 <div *ngIf="name">
@@ -41,6 +41,12 @@
 <div #data>
   <input type="text" [(ngModel)]="data.name" />
   {{data.name}}
-  
-  
 </div>
+
+<hr>
+
+<template [ngIf]="dynamicValue">true</template>
+<template [ngIf]="!dynamicValue">false</template>
+-->
+
+<router-outlet></router-outlet>
